@@ -22,7 +22,7 @@
 html{
     scroll-behavior: smooth;
 }
-
+ 
 body{
     margin: 0;
     padding: 0;
@@ -137,6 +137,7 @@ ul{
 .mainHead{
     font-weight: 200;
     padding-bottom: 15px;
+    text-align: left;
 }
 
 .mainHead span{
