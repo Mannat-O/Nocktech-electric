@@ -9,8 +9,8 @@
 }
 
 :root{
-    --pallete-secondary:#333333;
-    --pallete-main:#F9B200;
+    --pallete-secondary:#16202A;
+    --pallete-main:#00b3ff;
     --shadow:8px 7px 18px 2px rgb(0 0 0 / 0.25);
     font-size: 14px;
 }
@@ -74,7 +74,7 @@ ul{
     margin-left: 10px;
 }
 .logo img{
-    width:100px;
+    width:120px;
 }
 
 .sub-logo{
@@ -221,14 +221,21 @@ transform: rotate(45deg);
     width: 140px;
     font-size: 15px;
     font-weight:4px;
-    background:#FAB202;
+    background:#EB0600;
     text-decoration: none;
     padding: 10px;
     border: none;
     border-radius: 25px;
-    color:rgb(58, 58, 58);
+    color:white;
 }
 
+.contactButton button:hover{
+
+    transform: translateY(-5px);
+    transition: all ease 0.5s;
+    background-color: var(--pallete-secondary);
+    color: white;
+}
 
 @media (max-width:1300px){
     .contactButton{
@@ -303,13 +310,17 @@ transform: rotate(45deg);
     .sub-logo{
         display: none;
     }
+
+    .logo{
+        margin-left:0px;
+    }
 }
 
 /********************************************************/
 
 .hero-wrapper{
     width:100%;
-    background: #F9B200;
+    background: var(--pallete-main);
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -445,11 +456,11 @@ transform: rotate(45deg);
 
 .callButton{
     width:30%;
-    border-radius: 20px;
-    background-color: var(--pallete-main);
-    color: var(--pallete-secondary);
+    border-radius: 10px;
+    background-color: #EB0600;
+    color: whitesmoke;
     border: none;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     transition: background-color 0.3s ease, transform 0.3s ease;
     font-family: inherit;
     height: 40px;
@@ -604,8 +615,8 @@ transform: rotate(45deg);
 .white-bg-button {
     width: 100%;
     padding: 15px;
-    background-color: var(--pallete-main);
-    color: var(--pallete-secondary);
+    background-color: var(--pallete-secondary);
+    color: white;
     border: none;
     border-radius: 5px;
     font-size: 18px;
@@ -614,9 +625,9 @@ transform: rotate(45deg);
 }
 
 .white-bg-button:hover {
-    background-color: var(--pallete-secondary);
+    background-color: var(--pallete-main);
     transform: translateY(-2px);
-    color:white;
+    color:var(--pallete-secondary);
 }
 
 .contact-form button:active {
@@ -970,6 +981,7 @@ h1 {
 
 .img-tagline-subheadings p{
     font-weight: 600;
+    color: #EB0600;
 
 }
 
