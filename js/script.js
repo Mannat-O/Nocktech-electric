@@ -33,32 +33,32 @@ function validateInput(input) {
     }
 }
 
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Formun gönderilmesini engeller
+// document.getElementById('contactForm').addEventListener('submit', function(event) {
+//     event.preventDefault(); // Formun gönderilmesini engeller
 
-    const formIsValid = [...document.querySelectorAll('.input-group input, .input-group textarea')].every(input => {
-        return input.checkValidity();
-    });
+//     const formIsValid = [...document.querySelectorAll('.input-group input, .input-group textarea')].every(input => {
+//         return input.checkValidity();
+//     });
 
-    const notification = document.createElement('div');
-    notification.className = 'notification';
+//     const notification = document.createElement('div');
+//     notification.className = 'notification';
 
-    if (formIsValid) {
-        notification.classList.add('success');
-        notification.innerText = `Thank you for contacting us! We will get back to you soon.`;
-        document.getElementById('contactForm').reset(); // Formu sıfırla
-        document.querySelectorAll('.input-group label').forEach(label => label.classList.remove('focused'));
-    } else {
-        notification.classList.add('error');
-        notification.innerText = 'Please fill out all fields correctly before submitting the form.';
-    }
+//     if (formIsValid) {
+//         notification.classList.add('success');
+//         notification.innerText = `Thank you for contacting us! We will get back to you soon.`;
+//         document.getElementById('contactForm').reset(); // Formu sıfırla
+//         document.querySelectorAll('.input-group label').forEach(label => label.classList.remove('focused'));
+//     } else {
+//         notification.classList.add('error');
+//         notification.innerText = 'Please fill out all fields correctly before submitting the form.';
+//     }
 
-    document.body.appendChild(notification);
+//     document.body.appendChild(notification);
 
-    setTimeout(() => {
-        notification.remove();
-    }, 5000);
-});
+//     setTimeout(() => {
+//         notification.remove();
+//     }, 5000);
+// });
 
 /*JS for faq toggle*/ 
 
