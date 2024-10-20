@@ -910,7 +910,6 @@ h1 {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 4rem 4rem 4rem;
     gap: 35px 15px;
-    padding: 20px;
     flex: 1 2 0;
     position: sticky;
 
@@ -1005,6 +1004,7 @@ h1 {
     .service-options{
         display: grid;
         grid-template-columns: 1fr 1fr;
+        width: 100%;
         
     }
 

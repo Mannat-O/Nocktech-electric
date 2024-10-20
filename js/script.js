@@ -65,18 +65,15 @@ function validateInput(input) {
 const questions = document.querySelectorAll(".question");
 const drop = document.querySelector(".drop");
 
-console.log(questions);
 
 questions.forEach((ques)=>{
-    console.log(ques);
     ques.addEventListener('click', ()=>{
 
         const img = ques.querySelector(".images");
         console.log(img.src);
 
         if(img.src.includes("icon-plus.svg")){
-          img.src = img.src.replace("icon-plus.svg", "icon-minus.svg");
-          console.log(img.src);  
+          img.src = img.src.replace("icon-plus.svg", "icon-minus.svg"); 
         } 
         else img.src = img.src.replace("icon-minus.svg", "icon-plus.svg");
     })
@@ -107,6 +104,7 @@ services.forEach((service)=>{
         service.classList.add("selected");
         const serviceType = service.dataset.key;
 
+        console.log(serviceType);
         
         switch (serviceType){
 
@@ -163,6 +161,22 @@ services.forEach((service)=>{
                 subheadings3.innerText = "Professionally Trained Electricians";
                 
                 break;  
+
+            case "furnace":
+                heading.innerText = "Furnace & Water Heater";
+                taglineInfo.innerText = "We provide expert furnace installations to ensure reliable, energy-efficient heating for your home. Our team also specializes in installing traditional tank water heaters for consistent hot water storage and tankless systems for space-saving, on-demand hot water solutions.";
+                subheadings1.innerText = "Reliable, energy-efficient furnace installation for year-round comfort";
+                subheadings2.innerText = "Consistent hot water with professionally installed tank heaters";
+                subheadings3.innerText = "Space-saving, on-demand hot water with energy-efficient tankless systems";
+                                        break;
+
+            case "ductless":
+                heading.innerText = "Ductless Heating and cooling";
+                taglineInfo.innerText = "We provide expert installation of ductless heat pumps, offering an energy-efficient solution for both heating and cooling. These systems are perfect for homes without ductwork, delivering year-round comfort with minimal energy consumption.";
+                subheadings1.innerText = "Efficient heating and cooling tailored to each room";
+                subheadings2.innerText = "Lower energy bills with advanced inverter technology";
+                subheadings3.innerText = "Quiet operation for enhanced indoor comfort";
+                                        break;
             
 
             
@@ -196,59 +210,59 @@ commServices.forEach((service)=>{
 
         service.classList.add("selected");
         const serviceType = service.dataset.key;
-
         
         switch (serviceType){
 
-            case "commercial-lighting":
+            case "commercial-light":
                 commHeading.innerText = "Commercial Specialty Lighting";
                 commTaglineInfo.innerText = "We provide custom commercial lighting solutions that enhance both the function and aesthetics of your business space. Our specialty lighting services include the design and installation of energy-efficient, high-performance lighting systems tailored to your unique needs. From office spaces to retail environments, we create lighting setups that improve ambiance, safety, and energy savings.";
-                commSubheadings1.innerText = "Custom lighting designs for your business.";
-                commSubheadings2.innerText = "Energy-efficient and cost-effective solutions.";
-                commSubheadings3.innerText = "Enhances both ambiance and functionality.";
+                commSubheadings1.innerText = "Custom lighting designs for your business";
+                commSubheadings2.innerText = "Energy-efficient and cost-effective solutions";
+                commSubheadings3.innerText = "Enhances both ambiance and functionality";
                                         break;
             
             case "transformer":
                 commHeading.innerText = "Commercial Transformer Installation";
                 commTaglineInfo.innerText = "Our team offers complete commercial transformer installation services, providing reliable and safe power distribution for businesses of all sizes. We handle everything from selecting the right transformer for your needs to its installation and testing, ensuring your electrical system operates efficiently and without interruption. Whether you’re upgrading or installing a new system, we ensure your transformer meets your operational requirements and safety standards."
-                commSubheadings1.innerText = "Ensures efficient and stable power distribution.";
-                commSubheadings2.innerText = "Optimizes energy usage.";
-                commSubheadings3.innerText = "Professionally installed to meet safety regulations.";
+                commSubheadings1.innerText = "Ensures efficient and stable power distribution";
+                commSubheadings2.innerText = "Optimizes energy usage";
+                commSubheadings3.innerText = "Professionally installed to meet safety regulations";
                                         break; 
                 
             
             case "troubleshooting":
                 commHeading.innerText = "Electrical Troubleshooting";
                 commTaglineInfo.innerText = "Our electrical troubleshooting service is designed to quickly identify and resolve any electrical issues affecting your commercial or industrial operations. Using advanced diagnostic tools, our skilled electricians can pinpoint problems such as faulty wiring, power surges, or circuit overloads, providing fast, effective solutions that minimize downtime and prevent future issues.";
-                commSubheadings1.innerText = "Fast identification of electrical issues.";
-                commSubheadings2.innerText = "Minimizes operational disruption.";
-                commSubheadings3.innerText = "Advanced tools for accurate problem-solving.";
+                commSubheadings1.innerText = "Fast identification of electrical issues";
+                commSubheadings2.innerText = "Minimizes operational disruption";
+                commSubheadings3.innerText = "Advanced tools for accurate problem-solving";
                                         break;
             
             case "maintenance":
                 commHeading.innerText = "Electrical Maintenance";
                 commTaglineInfo.innerText = "Our electrical maintenance services focus on keeping your electrical systems running smoothly and safely. We provide regular inspections, performance testing, and preventive maintenance to identify potential issues before they lead to costly breakdowns. With a proactive approach, we help minimize disruptions, improve system efficiency, and maintain a safe working environment for your team.";
                 commSubheadings1.innerText = "Ensures efficient system performance";
-                commSubheadings2.innerText = "Prevents unexpected electrical failures.";
-                commSubheadings3.innerText = "Extends the lifespan of electrical equipment.";
+                commSubheadings2.innerText = "Prevents unexpected electrical failures";
+                commSubheadings3.innerText = "Extends the lifespan of electrical equipment";
                                         break;
 
             case "splitter":
                 commHeading.innerText="Splitter Box Installation";
                 commTaglineInfo.innerText="We offer expert installation of commercial splitter boxes to help you distribute power across multiple circuits from a single source. This service is ideal for businesses looking to expand their electrical systems without overloading existing circuits, providing an efficient and cost-effective solution for managing power distribution in your facility.";
-                commSubheadings1.innerText = "Expands electrical capacity.";
-                commSubheadings2.innerText = "Reduces downtime by enhancing power distribution.";
-                commSubheadings3.innerText = "Safe and reliable installation process.";
+                commSubheadings1.innerText = "Expands electrical capacity";
+                commSubheadings2.innerText = "Reduces downtime by enhancing power distribution";
+                commSubheadings3.innerText = "Safe and reliable installation process";
                 
                                         break;
 
             case "switch":
                 commHeading.innerText = "Disconnect Switch Installation";
                 commTaglineInfo.innerText = "Our disconnect switch installation service ensures safe, efficient isolation of electrical circuits in commercial and industrial settings. This allows for the controlled shutdown of power during equipment maintenance or emergencies, preventing accidents and electrical hazards. Whether you’re upgrading your system or need new installations, our team ensures seamless integration into your existing electrical infrastructure.";
-                commSubheadings1.innerText = "Provides quick power isolation for safety.";
-                commSubheadings2.innerText = "Ideal for routine maintenance or emergency shutdowns.";
-                commSubheadings3.innerText = "Fully compliant with electrical safety standards.";
+                commSubheadings1.innerText = "Provides quick power isolation for safety";
+                commSubheadings2.innerText = "Ideal for routine maintenance or emergency shutdowns";
+                commSubheadings3.innerText = "Fully compliant with electrical safety standards";
                                         break; 
+
 
         }
     })
@@ -257,7 +271,6 @@ commServices.forEach((service)=>{
 const navElement = document.querySelector(".dropdown");
 const hamburger = document.querySelector(".menu-stack");
 
-console.log(navElement);
 
 hamburger.addEventListener("click", ()=>{
     navElement.classList.toggle("nav-open");
