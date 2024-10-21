@@ -986,14 +986,16 @@ h1 {
 
 .estimate-button{
     margin-top: 10px;
+    width:300px;
 }
 
-@media (min-width:500px){
+@media (max-width:500px){
     
     .estimate-button{
-        width:auto
+        width: auto;
     }
 }
+
 
 @media (max-width:1000px) {
 
