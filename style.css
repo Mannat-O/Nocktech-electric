@@ -985,8 +985,14 @@ h1 {
 }
 
 .estimate-button{
-    width:300px;
     margin-top: 10px;
+}
+
+@media (min-width:500px){
+    
+    .estimate-button{
+        width:auto
+    }
 }
 
 @media (max-width:1000px) {
@@ -1024,9 +1030,6 @@ h1 {
         text-align: left;
     }
 
-    .estimate-button{
-        margin-left: -10px;
-    }
 }
 
 /*****************************************************************/
@@ -1057,16 +1060,16 @@ h1 {
 }
 
 .location{
-    text-align: center;
+    text-align: left;
     border-radius:20px;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     background-color: white;
     color: var(--pallete-secondary);
     padding:10px 10px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap:5px;
+    justify-content: flex-start;
+    gap:4px;
 
 }
 
